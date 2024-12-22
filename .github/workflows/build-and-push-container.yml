@@ -6,7 +6,7 @@ on:
     branches:
       - "main"
     paths:
-      - "devcontainer.dockerfile"
+      - "caddy.dockerfile"
 
 env:
   IMAGE_NAME: caddy-reverse-proxy-container
