@@ -1,4 +1,4 @@
-FROM caddy:2.9-builder@sha256:1ddbf9265777f5a669f25979b2e02af57b565c272fae2399e650a910269a4cb9 AS builder
+FROM caddy:2.9-builder@sha256:2a8fa145864fc11ba1876dd7f03010ee2fb6d52f9a5eaafb1eb8eec53b2b44b0 AS builder
 
 RUN xcaddy build \
     # We need this for our wildcard certificate
