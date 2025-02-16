@@ -4,6 +4,6 @@ RUN xcaddy build \
     # We need this for our wildcard certificate
     --with github.com/caddy-dns/cloudflare
 
-FROM caddy:2.9@sha256:f27c4c64e20ca80651d1fdee831785e49553169bf9c9668600b456932f75ac47
+FROM caddy:2.9@sha256:1c4bc9ead95a0888f1eea3a56ef79f30bd0d271229828fdd25090d898f553571
 
 COPY --from=builder /usr/bin/caddy /usr/bin/caddy
