@@ -5,6 +5,6 @@ RUN xcaddy build \
     --with github.com/caddy-dns/cloudflare \
     --with github.com/greenpau/caddy-security
 
-FROM caddy:2.10@sha256:a41a9b42b2a0a9d47f7c8b84a42485649442cc490c51264811150d447a331c56
+FROM caddy:2.10@sha256:614bbc6da7ec42f3c76077e86f429297047680f9cb420ad0f07a8fe049193d89
 
 COPY --from=builder /usr/bin/caddy /usr/bin/caddy
