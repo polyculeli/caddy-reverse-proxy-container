@@ -1,10 +1,10 @@
-FROM caddy:2.10-builder@sha256:5ffdd1eb7c262d118977dfd8c4a0c34c7781366fbadef3b4daeac459cb30e99e AS builder
+FROM caddy:2.10-builder@sha256:f8930c8c45d19fa60db1599500b39fcef775003ab1cace65737eb2cf9c06b1a4 AS builder
 
 RUN xcaddy build \
     # We need this for our wildcard certificate
     --with github.com/caddy-dns/cloudflare \
     --with github.com/greenpau/caddy-security
 
-FROM caddy:2.10@sha256:614bbc6da7ec42f3c76077e86f429297047680f9cb420ad0f07a8fe049193d89
+FROM caddy:2.10@sha256:61a257991a7cca3d843218fb4a4eaf8b3241443fed67f43b5a2b56848237eba0
 
 COPY --from=builder /usr/bin/caddy /usr/bin/caddy
