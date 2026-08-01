@@ -3,7 +3,7 @@ FROM caddy:2.11-builder@sha256:198d47eaee306d4d0c38a9960c89ff2c959aa29ad51d3e2da
 RUN xcaddy build \
     # We need this for our wildcard certificate
     --with github.com/caddy-dns/cloudflare \
-    --with github.com/relvacode/caddy-oidc
+    --with github.com/relvacode/caddy-oidc@main
 
 FROM caddy:2.11@sha256:844f60b64e4724a5aa8245e019dace0d3f199f7433ce6c57676cb30a920dbad9
 
